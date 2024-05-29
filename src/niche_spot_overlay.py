@@ -42,7 +42,7 @@ def plot(id_df):
     )
     ax.axis("equal")
     ax.axis("off")
-    make_legend(ax)
+    # make_legend(ax)
     fig.savefig(
         f"{base_path}/{wsi_uuid}.png",
         bbox_inches="tight",  # include legend
