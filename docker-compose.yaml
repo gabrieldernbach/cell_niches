@@ -1,0 +1,15 @@
+services:
+  container:
+    build:
+      context: "."
+    working_dir: /repo/src
+    volumes:
+      # assume data and repository was cloned to `~/crete_heraklion/*`
+      -  ${HOME}/crete_heraklion/repo:/repo
+      -  ${HOME}/crete_heraklion/data:/data
+    environment:
+      - USER=$USER
+      - PYTHONPATH=/repo
+    stdin_open: true  # useful with docker compose up && docker attach $containername
+    tty: true #  useful with docker compose up && docker attach $containername
+#    command: python /src/main.py
