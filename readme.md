@@ -21,9 +21,9 @@
 TIER 1 and TIER2 data can be retrieved from DOI `10.5281/zenodo.11369540`.
 
 # RUN
-* choose a location for the experiment `mkdir ~/cretehearklion && cd $_`
-* fetch TIER 1 and TIER 2 data `curl {zendo_link} ~/creteheraklion/data`
-* clone repoistory `git clone {github link} ~/creteheraklion/repo`
+* choose a location for the experiment `mkdir ~/mypath && cd $_`
+* fetch TIER 1 and TIER 2 data `curl {zendo_link} ~/data/`
+* clone repoistory `git clone {github link} ~/repo`
 * start environment `docker-compose run container`
 * start experiment `python main.py`
 
