@@ -1,3 +1,6 @@
+![alt text](https://github.com/gabrieldernbach/cell-niches/blob/main/spots.png)
+
+
 # Data is structured in 
 * TIER 1 (provided)
   * raw H&E images
