@@ -51,8 +51,14 @@ bind the directories `-v` and set the working directory `-w`
   python src/main.py
 ```
 **Q I have a different platform (arm/x86) and can't use the public container, how can I rebuild it?
+
 **A You can make a local build by
+
 `cd ~/cell_niches/ && docker build -tag cellomics .`
+
 **Q I don't have docker
+
 **A You can setup python3.11 manually and run pip
+
 `pip install -r requirements.txt`
+
