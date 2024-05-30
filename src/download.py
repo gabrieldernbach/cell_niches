@@ -36,4 +36,4 @@ def load_extract(url, directory, name):
 
 load_extract(f"{web_base_path}/tier3.zip", "/data", "spatial")
 load_extract(f"{web_base_path}/tier2.zip", "/data", "geometries")
-load_extract(f"{web_base_path}/tier1.zip", "/data", "whole_slide_images")
+load_extract(f"{web_base_path}/tier1_metadata_only.zip", "/data", "whole_slide_images")
