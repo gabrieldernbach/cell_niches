@@ -8,6 +8,15 @@ This code accompanies the publication
 
 Data is available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11389863.svg)](https://doi.org/10.5281/zenodo.11389863)
 
+RUN
+===
+* in your home, crete a folder for the experiment `mkdir ~/cell_niches && cd $_`
+* clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo`
+* start environment `cd repo && docker-compose run container`
+* fetch data `python download.py`
+* start computation `python main.py`
+
+
 Data is structured in 
 =====================
 * TIER 1 (provided)
@@ -27,14 +36,6 @@ Data is structured in
   * cell-omics cluster-map
 
 TIER 1 and TIER2 data can be retrieved from DOI `10.5281/zenodo.11369540`.
-
-RUN
-===
-* in your home, crete a folder for the experiment `mkdir ~/cell_niches && cd $_`
-* clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo`
-* start environment `cd repo && docker-compose run container`
-* fetch data `python download.py`
-* start computation `python main.py`
 
 
 FAQ
