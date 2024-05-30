@@ -1,4 +1,5 @@
 from itertools import product
+import pathlib
 
 import pandas as pd
 from shapely.prepared import prep
@@ -105,6 +106,7 @@ def densities(points, phenotypes, regions):
 
 
 def run():
+    pathlib.Path("/data/tier3/").mkdir(parents=True, exist_ok=True)
     marks, points, regions = get_geometries()
     phenotypes = phenotyping(marks.set_index(["polygon_uuid", "wsi_uuid"]), "medium")
     wsi_uuids = points.wsi_uuid.drop_duplicates()
