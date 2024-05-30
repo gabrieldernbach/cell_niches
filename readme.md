@@ -7,8 +7,6 @@ This code accompanies the publication
 **Multimodal AI-powered spatial cellomics enhances risk stratification in non-small cell lung cancer.**
 
 Data is available at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11389863.svg)](https://doi.org/10.5281/zenodo.11389863)
- 
-![DOI](https://zenodo.org/records/11389863)
 
 Data is structured in 
 =====================
