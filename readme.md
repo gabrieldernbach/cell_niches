@@ -22,9 +22,10 @@ RUN
   docker run -it \
   -v ~/cell_niches/data:/data \
   -v ~/cell_niches/repo:/repo \
-  -w /src \
-  gabrieldernbach/cell_niches:cellomics
+  -w /repo/src \
+  cellmoics
 ```
+----gabrieldernbach/cell_niches:cellomics
 * fetch data `python download.py`
 * start computation `python main.py`
 
