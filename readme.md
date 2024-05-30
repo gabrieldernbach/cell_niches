@@ -37,10 +37,12 @@ RUN
 * start computation `python main.py`
 
 
-# FAQ
+FAQ
 =====
 **Q I don't have docker-compose, can I still run the code?
+
 **A If you don't have docker-compose available you can start the container and manually
+
 bind the directories `-v` and set the working directory `-w`
 ```
   docker run -it \
