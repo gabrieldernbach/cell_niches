@@ -1,4 +1,5 @@
 import duckdb
+import pathlib
 import numpy as np
 import pandas as pd
 from scipy.spatial import KDTree
@@ -108,6 +109,7 @@ def run_clustering():
         )
 
 def run():
+    pathlib.Path("/data/tier3/").mkdir(parents=True, exist_ok=True)
     run_neighbourhood_aggregation()
     run_clustering()
 
