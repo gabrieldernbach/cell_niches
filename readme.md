@@ -37,18 +37,22 @@ RUN
 * start computation `python main.py`
 
 
-# FAQ container
-If you don't have docker-compose available you can manually do
+# FAQ
+=====
+**Q I don't have docker-compose, can I still run the code?
+**A If you don't have docker-compose available you can start the container and manually
+bind the directories `-v` and set the working directory `-w`
 ```
   docker run -it \
   -v ~/crete_heraklion/data:/data \
   -v ~/crete_hearklion/repo:/repo \
-  gabrieldernbach/crete_heraklion:cellomics \
+  -w /src \
+  gabrieldernbach/cell_niches:cellomics \
   python src/main.py
 ```
-
-If you don't have connection to dockerhub you can build the image locally
-`cd /your/local/dir/repo/ && docker build -tag crete_heraklion .`
-
-If you don't have docker, you can setup python3.11 manually and run pip
+**Q I have a different platform (arm/x86) and can't use the public container, how can I rebuild it?
+**A You can make a local build by
+`cd ~/cell_niches/ && docker build -tag cellomics .`
+**Q I don't have docker
+**A You can setup python3.11 manually and run pip
 `pip install -r requirements.txt`
