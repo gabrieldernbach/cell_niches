@@ -1,6 +1,6 @@
 FROM python:3.11
 
-RUN apt-get update && apt-get install gdal-bin libgdal-dev -y
+# RUN apt-get update && apt-get install gdal-bin libgdal-dev -y # only necessary for using geopandas
 
 COPY . /repo
 WORKDIR /repo
