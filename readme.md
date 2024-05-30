@@ -32,7 +32,7 @@ RUN
 ===
 * in your home, crete a folder for the experiment `mkdir ~/cell_niches && cd $_`
 * clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo`
-* start environment `docker-compose run container`
+* start environment `cd repo && docker-compose run container`
 * fetch data `python download.py`
 * start computation `python main.py`
 
