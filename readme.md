@@ -23,7 +23,7 @@ RUN
   -v ~/cell_niches/data:/data \
   -v ~/cell_niches/repo:/repo \
   -w /repo/src \
-  cellmoics
+  cellomics
 ```
 ----gabrieldernbach/cell_niches:cellomics
 * fetch data `python download.py`
