@@ -1,7 +1,13 @@
 ![alt text](https://github.com/gabrieldernbach/cell-niches/blob/main/spots.png)
 
+Introduction
+============
+This code accompanies the publication *Multimodal AI-powered spatial cellomics enhances risk stratification in non-small cell lung cancer*.
+Data [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11389863.svg)](https://doi.org/10.5281/zenodo.11389863)
 
-# Data is structured in 
+
+Data is structured in 
+=====================
 * TIER 1 (provided)
   * raw H&E images
   * registered raw mIF images
@@ -20,7 +26,8 @@
 
 TIER 1 and TIER2 data can be retrieved from DOI `10.5281/zenodo.11369540`.
 
-# RUN
+RUN
+===
 * choose a location for the experiment `mkdir ~/mypath && cd $_`
 * fetch TIER 1 and TIER 2 data `curl {zendo_link} ~/data/`
 * clone repoistory `git clone {github link} ~/repo`
