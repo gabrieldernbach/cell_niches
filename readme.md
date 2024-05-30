@@ -47,8 +47,8 @@ FAQ
 bind the directories `-v` and set the working directory `-w`
 ```
   docker run -it \
-  -v ~/crete_heraklion/data:/data \
-  -v ~/crete_hearklion/repo:/repo \
+  -v ~/cell_niches/data:/data \
+  -v ~/cell_niches/repo:/repo \
   -w /src \
   gabrieldernbach/cell_niches:cellomics \
   python src/main.py

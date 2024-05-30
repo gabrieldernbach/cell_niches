@@ -1,3 +1,4 @@
+version: "3.0"
 services:
   container:
 #### for local build use this instead
