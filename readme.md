@@ -17,8 +17,8 @@ RUN
 * start computation `python main.py`
 
 
-Data is structured in 
-=====================
+Data is structured into
+=======================
 * TIER 1 (provided)
   * raw H&E images
   * registered raw mIF images

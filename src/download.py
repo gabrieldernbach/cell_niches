@@ -8,13 +8,10 @@ from tqdm import tqdm
 
 web_base_path = "https://zenodo.org/records/11389863/files/"
 
-
-for i in range(1, 5):
-    Path(f"/data/tier{i}/").mkdir(parents=True, exist_ok=True)
-
-Path("/data/tier1/wsis").mkdir(parents=True, exist_ok=True)
-Path("/data/tier1/metadata").mkdir(parents=True, exist_ok=True)
-
+# for i in range(1, 5):
+#     Path(f"/data/tier{i}/").mkdir(parents=True, exist_ok=True)
+# Path("/data/tier1/wsis").mkdir(parents=True, exist_ok=True)
+# Path("/data/tier1/metadata").mkdir(parents=True, exist_ok=True)
 
 
 def load_url(url, destination, description):
@@ -32,11 +29,11 @@ def extract_zip(source: BinaryIO, destination: str, description: str):
         for member in tqdm(zf.infolist(), desc=description):
             zf.extract(member, destination)
 
-url = f"{web_base_path}/tier2.zip"
-stream = load_url(url, io.BytesIO(), "loading geometries")
-extract_zip(stream, "/data", "extracting geometries")
+def load_extract(url, directory, name):
+    stream = load_url(url, io.BytesIO(), f"loading {name}")
+    extract_zip(stream, directory, f"extracting {name}")
 
-# url = f"{web_base_path}/wsis.zip"
-# stream = load_url(url, io.BytesIO(), "downloading wsis")
-# extract_zip(stream, "/data/tier1/wsis", "extracting wsis")
 
+load_extract(f"{web_base_path}/tier3.zip", "/data", "spatial")
+load_extract(f"{web_base_path}/tier2.zip", "/data", "geometries")
+load_extract(f"{web_base_path}/tier1.zip", "/data", "whole_slide_images")
