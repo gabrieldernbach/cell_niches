@@ -39,9 +39,9 @@ RUN
 
 FAQ
 =====
-**Q I don't have docker-compose, can I still run the code?
+**Q: I don't have docker-compose, can I still run the code?**
 
-**A If you don't have docker-compose available you can start the container and manually
+**A**: If you don't have docker-compose available you can start the container and manually
 
 bind the directories `-v` and set the working directory `-w`
 ```
@@ -52,15 +52,15 @@ bind the directories `-v` and set the working directory `-w`
   gabrieldernbach/cell_niches:cellomics \
   python src/main.py
 ```
-**Q I have a different platform (arm/x86) and can't use the public container, how can I rebuild it?
+**Q I have a different platform (arm/x86) and can't use the public container, how can I rebuild it?**
 
-**A You can make a local build by
+**A** You can make a local build by**
 
 `cd ~/cell_niches/ && docker build -tag cellomics .`
 
-**Q I don't have docker
+**Q I don't have docker**
 
-**A You can setup python3.11 manually and run pip
+**A** You can setup python3.11 manually and run pip
 
 `pip install -r requirements.txt`
 
