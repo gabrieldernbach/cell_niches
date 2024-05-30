@@ -1,15 +1,17 @@
 services:
   container:
-    build:
-      context: "."
-    working_dir: /repo/src
+#### for local build use this instead
+#    build:
+#      context: "."
+#### by default, load from dockerhub
+    image: gabrieldernbach/cell_niches:cellomics
     volumes:
-      # assume data and repository was cloned to `~/crete_heraklion/*`
-      -  ${HOME}/crete_heraklion/repo:/repo
-      -  ${HOME}/crete_heraklion/data:/data
+      # assume data and repository was cloned to `~/cell_niches/*`
+      -  ${HOME}/cell_niches/repo:/repo
+      -  ${HOME}/cell_niches/data:/data
+    working_dir: /repo/src
     environment:
       - USER=$USER
       - PYTHONPATH=/repo
     stdin_open: true  # useful with docker compose up && docker attach $containername
     tty: true #  useful with docker compose up && docker attach $containername
-#    command: python /src/main.py
