@@ -6,13 +6,7 @@ from typing import BinaryIO
 import requests
 from tqdm import tqdm
 
-web_base_path = "https://zenodo.org/records/11389863/files/"
-
-# for i in range(1, 5):
-#     Path(f"/data/tier{i}/").mkdir(parents=True, exist_ok=True)
-# Path("/data/tier1/wsis").mkdir(parents=True, exist_ok=True)
-# Path("/data/tier1/metadata").mkdir(parents=True, exist_ok=True)
-
+web_base_path = "https://zenodo.org/records/11395885/files"
 
 def load_url(url, destination, description):
     response = requests.get(url, stream=True)
@@ -36,4 +30,4 @@ def load_extract(url, directory, name):
 
 load_extract(f"{web_base_path}/tier3.zip", "/data", "spatial")
 load_extract(f"{web_base_path}/tier2.zip", "/data", "geometries")
-load_extract(f"{web_base_path}/tier1.zip", "/data", "whole_slide_images")
+load_extract(f"{web_base_path}/tier1_metadata_only.zip", "/data", "whole_slide_images")

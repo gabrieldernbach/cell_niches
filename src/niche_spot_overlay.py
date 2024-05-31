@@ -46,10 +46,9 @@ def plot(id_df):
     fig.savefig(
         f"{base_path}/{wsi_uuid}.png",
         bbox_inches="tight",  # include legend
-        dpi=600,  # retina display
+        dpi=600,  # retina resolution
     )
-    plt.clf();
-    plt.cla()
+    plt.clf(); plt.cla()
 
 
 def run():
