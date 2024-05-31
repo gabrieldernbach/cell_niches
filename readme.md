@@ -23,7 +23,24 @@ RUN
 * start computation `python main.py`
 
 
-Data is structured into
+OUTCOME
+=======
+The code will aggregate the phenotypes within each region for each spot, results are placed in `/data/tier3`.
+
+The neighbourhood aggregation will result in a per-cell statistic to be found int `/data/tier3/cell_neighbourhoods`.
+
+The niche clustering will produce a niche-assignment for each cell `/data/iter3/cell_niche_assignment`,
+the cluster prototypes `/data/iter3/{entity}/niche_prototypes` and summarize for each spot, how many of its cells
+have been assigned to a given prototype `/data/iter3/spot_niche_loading`.
+
+The plots of the spots with niches overlayed (color coded categories) is written to `/data/tier4/nicht_spot_overaly`.
+
+We include cohort wide spot-niche-loading in `publication_all_spots_niche_loading_{entity}.parquet`, and recreate
+the clustermaps in `/data/tier4/{entity}_clustermap.png`.
+
+We conclude with a final overview
+
+Data structure overview
 =======================
 * TIER 1 (provided)
   * raw H&E images
@@ -40,5 +57,3 @@ Data is structured into
 * TIER 4 (to be computed)
   * plot for each spot with cells assigned to niches
   * cell-omics cluster-map
-
-TIER 1 and TIER2 data can be retrieved from DOI `10.5281/zenodo.11369540`.
