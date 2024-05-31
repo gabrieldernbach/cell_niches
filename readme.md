@@ -27,7 +27,7 @@ RUN
 ===
 
 * in your home, crete a folder for the experiment <br> `mkdir ~/cell_niches && cd $_`
-* clone repoistory <br> `git clone https://github.com/gabrieldernbach/cell_niches repo && cd repo`
+* clone repository <br> `git clone https://github.com/gabrieldernbach/cell_niches repo && cd repo`
 * build environment <br> `docker build -t cellomics . `
 * start environment <br> `docker run -it -v ~/cell_niches/data:/data -v ~/cell_niches/repo:/repo -w /repo/src cellomics`
 * fetch data <br> `python download.py`
@@ -37,13 +37,13 @@ OUTCOME
 =======
 The code will aggregate the phenotypes within each region for each spot, results are placed in `/data/tier3`.
 
-The neighbourhood aggregation will result in a per-cell statistic to be found int `/data/tier3/cell_neighbourhoods`.
+The neighbourhood aggregation will result in a per-cell statistic to be found in `/data/tier3/cell_neighbourhoods`.
 
 The niche clustering will produce a niche-assignment for each cell `/data/iter3/cell_niche_assignment`,
 the cluster prototypes `/data/iter3/{entity}/niche_prototypes` and will summarize for each spot, how many of its cells
 have been assigned to a given prototype `/data/iter3/spot_niche_loading`.
 
-The plots of the spots with niches overlayed (color coded categories) is written to `/data/tier4/nicht_spot_overaly`.
+The plots of the spots with niches overlay (color coded categories) is written to `/data/tier4/nicht_spot_overaly`.
 
 We include cohort wide spot-niche-loading in `publication_all_spots_niche_loading_{entity}.parquet`, and recreate
 the clustermaps in `/data/tier4/{entity}_clustermap.png`.
