@@ -27,7 +27,7 @@ RUN
 ===
 
 * in your home, crete a folder for the experiment `mkdir ~/cell_niches && cd $_`
-* clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo`
+* clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo && cd repo`
 * build environment `docker build -t cellomics . `
 * start environment `docker run -it -v ~/cell_niches/data:/data -v ~/cell_niches/repo:/repo -w /repo/src cellomics`
 * fetch data `python download.py`
