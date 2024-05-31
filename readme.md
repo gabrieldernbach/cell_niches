@@ -47,8 +47,6 @@ The plots of the spots with niches overlayed (color coded categories) is written
 We include cohort wide spot-niche-loading in `publication_all_spots_niche_loading_{entity}.parquet`, and recreate
 the clustermaps in `/data/tier4/{entity}_clustermap.png`.
 
-We conclude with a final overview
-
 Data structure overview
 =======================
 
@@ -63,7 +61,7 @@ Data structure overview
     * density of phenotyped cells within region
     * niche prototypes
     * niche assignment of each cell
-    * abundance of niche type with in each spot
+    * abundance of niche type within each spot
 * TIER 4 (to be computed)
     * plot for each spot with cells assigned to niches
     * cell-omics cluster-map
