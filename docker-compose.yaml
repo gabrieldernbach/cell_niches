@@ -4,7 +4,7 @@ services:
 #    build:
 #      context: "."
 #### by default, load from dockerhub
-    image: gabrieldernbach/cell_niches:cellomics
+    image: gabrieldernbach/cell_niches:cellomics # only works with ARM builds atm
     volumes:
       # assume data and repository was cloned to `~/cell_niches/*`
       -  ${HOME}/cell_niches/repo:/repo
