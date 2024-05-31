@@ -1,5 +1,5 @@
-from itertools import product
 import pathlib
+from itertools import product
 
 import pandas as pd
 from shapely.prepared import prep
@@ -7,7 +7,8 @@ from tqdm import tqdm
 
 from src.utils import get_geometries
 
-pd.set_option('future.no_silent_downcasting', True) # accept future behaviour
+pd.set_option('future.no_silent_downcasting', True)  # accept future behaviour
+
 
 def extract(pattern, column, df):
     """extract regex `pattern` from `column` of `df` and let result take its place"""

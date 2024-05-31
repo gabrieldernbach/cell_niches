@@ -1,12 +1,12 @@
 import io
 import zipfile
-from pathlib import Path
 from typing import BinaryIO
 
 import requests
 from tqdm import tqdm
 
 web_base_path = "https://zenodo.org/records/11395885/files"
+
 
 def load_url(url, destination, description):
     response = requests.get(url, stream=True)
@@ -22,6 +22,7 @@ def extract_zip(source: BinaryIO, destination: str, description: str):
     with zipfile.ZipFile(source) as zf:
         for member in tqdm(zf.infolist(), desc=description):
             zf.extract(member, destination)
+
 
 def load_extract(url, directory, name):
     stream = load_url(url, io.BytesIO(), f"loading {name}")

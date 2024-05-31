@@ -1,11 +1,14 @@
-import pandas as pd
+import colorcet as cc
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import seaborn as sns
+from matplotlib.colors import ListedColormap
 from scipy.cluster import hierarchy
 from scipy.spatial import distance
-from matplotlib.colors import ListedColormap
-import colorcet as cc
-import seaborn as sns
+
+mpl.use('Agg')  # use without front-end interactive windows, only create files
 
 
 def load_and_preprocess_data(filepath):
@@ -63,7 +66,8 @@ def run():
 
         g = create_clustermap(normalized_data.T, row_linkage, col_linkage, col_colors)
         g.savefig(f"/data/tier4/{entity}_clustermap.png")
-        plt.clf(); plt.cla()
+        plt.clf();
+        plt.cla()
 
 
 if __name__ == "__main__":

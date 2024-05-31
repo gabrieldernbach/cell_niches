@@ -1,12 +1,15 @@
 from pathlib import Path
 
 import duckdb
+import matplotlib as mpl
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
 from src.utils import deserialize_wkb
+
+mpl.use('Agg')  # use without front-end interactive windows, only create files
 
 
 def make_legend(ax):
@@ -48,7 +51,7 @@ def plot(id_df):
         bbox_inches="tight",  # include legend
         dpi=600,  # retina resolution
     )
-    plt.clf(); plt.cla()
+    plt.close(fig)
 
 
 def run():
@@ -60,6 +63,7 @@ def run():
     """).df()
     niche_points = niche_points.pipe(deserialize_wkb)
     [plot(i) for i in tqdm(niche_points.groupby("wsi_uuid"), desc="Plotting spot niche overlays")]
+
 
 if __name__ == "__main__":
     run()

@@ -1,5 +1,6 @@
-import duckdb
 import pathlib
+
+import duckdb
 import numpy as np
 import pandas as pd
 from scipy.spatial import KDTree
@@ -26,6 +27,7 @@ class Neighbourhood:
             columns=multihot.columns
         )
         return aggregated
+
 
 def run_neighbourhood_aggregation():
     marks, points, regions = get_geometries()
@@ -108,10 +110,12 @@ def run_clustering():
             .to_parquet(f"/data/tier3/{entity}_niche_prototypes.parquet")
         )
 
+
 def run():
     pathlib.Path("/data/tier3/").mkdir(parents=True, exist_ok=True)
     run_neighbourhood_aggregation()
     run_clustering()
+
 
 if __name__ == "__main__":
     run()
