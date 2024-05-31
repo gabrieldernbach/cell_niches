@@ -26,12 +26,12 @@ and automatically downloaded by the provided scripts.
 RUN
 ===
 
-* in your home, crete a folder for the experiment `mkdir ~/cell_niches && cd $_`
-* clone repoistory `git clone https://github.com/gabrieldernbach/cell_niches repo && cd repo`
-* build environment `docker build -t cellomics . `
-* start environment `docker run -it -v ~/cell_niches/data:/data -v ~/cell_niches/repo:/repo -w /repo/src cellomics`
-* fetch data `python download.py`
-* start computation `python main.py`
+* in your home, crete a folder for the experiment <br> `mkdir ~/cell_niches && cd $_`
+* clone repoistory <br> `git clone https://github.com/gabrieldernbach/cell_niches repo && cd repo`
+* build environment <br> `docker build -t cellomics . `
+* start environment <br> `docker run -it -v ~/cell_niches/data:/data -v ~/cell_niches/repo:/repo -w /repo/src cellomics`
+* fetch data <br> `python download.py`
+* start computation <br> `python main.py`
 
 OUTCOME
 =======
