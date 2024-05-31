@@ -8,14 +8,15 @@ This code accompanies the publication
 
 Data is available
 at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11395885.svg)](https://doi.org/10.5281/zenodo.11395885)
-and automatically downloaded by the provided scripts
+and automatically downloaded by the provided scripts.
 
 > Risk stratification remains a critical challenge in non-small cell lung cancer (NSCLC) patients for optimal therapy
 > selection. In this study, we developed an AI-powered spatial cellomics approach that combines histology, multiplex
 > immunofluorescence imaging and multimodal machine learning to decipher the complex cellular relationships of 43 cell
 > phenotypes in the tumor microenvironment (TME) in a real-world cohort of 1,168 NSCLC patients from two large German
 > cancer centers. The AI model identified TME cell niches associated with survival and allowed for an improved risk
-> stratification combining niche patterns with conventional (UICC8) cancer staging. Our results showed that complex immune
+> stratification combining niche patterns with conventional (UICC8) cancer staging. Our results showed that complex
+> immune
 > cell niche patterns identify potentially undertreated high risk patients qualifying for adjuvant therapy. Our approach
 > highlights the potential of AI-powered multiplex imaging analyses to better understand the contribution of the TME to
 > cancer progression and to improve risk stratification and treatment selection in NSCLC.
