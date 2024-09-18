@@ -96,6 +96,8 @@ The following input files are expected:
 
 Users can adjust several parameters within the scripts to customize the analysis:
 
+The radius that determines the niche neighbourhood size can be adjusted in `cell_niche.py`.
+
 Phenotyping Granularity: The level of granularity for phenotype classification can be modified in the phenotype_density module. For example:
 ```python
 granularity = "medium"  # Can also be set to "fine"
